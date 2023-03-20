@@ -1,0 +1,17 @@
+{
+  "name": "serverdummies",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chart.js": "^2.7.3",
+    "express": "^4.16.4",
+    "mongojs": "^2.6.0",
+    "mongoose": "^5.5.4"
+  },
+
+  "engines": {
+    "node": "8.11.2",
+    "npm": "6.5.0"
+  }
+}
