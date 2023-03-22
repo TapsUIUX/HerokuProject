@@ -8153,7 +8153,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-page-hero-area [headerData]=\"subHeaderContent\"></app-page-hero-area>\n\n<div class=\"animated fadeIn faster\">\n  <section class=\"container animated fadeIn\">\n    <!-- <app-how-to-use></app-how-to-use> -->\n  </section>\n\n  <div class=\"container p-t-50 text-app font-light\">\n    <div class=\"row\">\n      <div class=\"text-app-header fs-25 p-b-20 col-12\">Grab and Go APIs</div>\n\n      <div\n        class=\"col-xs-12 col-sm-12 col-md-6 fs-18 api-section font-light\"\n        style=\"line-height: 10px\"\n      >\n        <br /><br />\n\n        <div>\n          <code>GET :</code>\n          <a href=\"https://www.serverdummies.com/api/posts/\" target=\"blank\">\n            http://www.serverdummies.com/api/posts/\n          </a>\n        </div>\n\n        <br /><br />\n\n        <div>\n          <code> GET : </code>\n          <a href=\" https://www.serverdummies.com/api/posts/1 \" target=\"blank\">\n            http://www.serverdummies.com/api/posts/1\n          </a>\n        </div>\n\n        <br /><br />\n\n        <div>\n          <code> GET :</code>\n          <a\n            href=\" https://www.serverdummies.com/api/posts/id=1  \"\n            target=\"blank\"\n          >\n            http://www.serverdummies.com/api/posts/id=1\n          </a>\n        </div>\n\n        <br /><br />\n\n        <div><code> POST :</code> https://www.serverdummies.com/api/posts</div>\n      </div>\n\n      <div\n        class=\"col-xs-12 col-sm-12 col-md-6 fs-18 api-section\"\n        style=\"line-height: 10px\"\n      >\n        <br /><br />\n\n        <div><code> PUT :</code> https://www.serverdummies.com/api/posts/1</div>\n\n        <br /><br />\n\n        <div>\n          <code> PATCH :</code> https://www.serverdummies.com/api/posts/1\n        </div>\n\n        <br /><br />\n\n        <div>\n          <code> DELETE :</code> https://www.serverdummies.com/api/posts/1\n        </div>\n        <br />\n      </div>\n    </div>\n  </div>\n\n  <!-- <app-generator-box (counter_e)=\"getCount($event)\"></app-generator-box> -->\n\n  <app-param-info></app-param-info>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-page-hero-area [headerData]=\"subHeaderContent\"></app-page-hero-area>\n\n<div class=\"animated fadeIn faster\">\n  <section class=\"container animated fadeIn\">\n    <!-- <app-how-to-use></app-how-to-use> -->\n  </section>\n\n  <div class=\"container p-t-50 text-app font-light\">\n    <div class=\"row\">\n      <div class=\"text-app-header fs-25 p-b-20 col-12\">Grab and Go APIs</div>\n\n      <div\n        class=\"col-xs-12 col-sm-12 col-md-6 fs-18 api-section font-light\"\n        style=\"line-height: 10px\"\n      >\n        <br /><br />\n\n        <div>\n          <code>GET :</code>\n          <a href=\"https://www.serverdummies.com/api/posts/\" target=\"blank\">\n            https://www.serverdummies.com/api/posts/\n          </a>\n        </div>\n\n        <br /><br />\n\n        <div>\n          <code> GET : </code>\n          <a href=\" https://www.serverdummies.com/api/posts/1 \" target=\"blank\">\n            https://www.serverdummies.com/api/posts/1\n          </a>\n        </div>\n\n        <br /><br />\n\n        <div>\n          <code> GET :</code>\n          <a\n            href=\" https://www.serverdummies.com/api/posts/id=1  \"\n            target=\"blank\"\n          >\n            https://www.serverdummies.com/api/posts/id=1\n          </a>\n        </div>\n\n        <br /><br />\n\n        <div><code> POST :</code> https://www.serverdummies.com/api/posts</div>\n      </div>\n\n      <div\n        class=\"col-xs-12 col-sm-12 col-md-6 fs-18 api-section\"\n        style=\"line-height: 10px\"\n      >\n        <br /><br />\n\n        <div><code> PUT :</code> https://www.serverdummies.com/api/posts/1</div>\n\n        <br /><br />\n\n        <div>\n          <code> PATCH :</code> https://www.serverdummies.com/api/posts/1\n        </div>\n\n        <br /><br />\n\n        <div>\n          <code> DELETE :</code> https://www.serverdummies.com/api/posts/1\n        </div>\n        <br />\n      </div>\n    </div>\n  </div>\n\n  <app-generator-box (counter_e)=\"getCount($event)\"></app-generator-box>\n\n  <app-param-info></app-param-info>\n</div>\n");
 
 /***/ }),
 
@@ -8643,25 +8643,26 @@ let JsonServerPageContainerComponent = class JsonServerPageContainerComponent {
         this._serv = _serv;
         this._dl = _dl;
     }
-    // getCount(){
-    //   this._serv.generateCount();
-    //   this._serv.getCount().subscribe((res)=>{
-    //     this.fetchCount = res['count'];
-    //   })
-    // }
+    getCount() {
+        return;
+        this._serv.generateCount();
+        this._serv.getCount().subscribe((res) => {
+            this.fetchCount = res["count"];
+        });
+    }
     ngOnInit() {
         this.subHeaderContent = {
-            icon: 'fa fa-hdd',
+            icon: "fa fa-hdd",
             info: [
-                'Create customised JSON that suits your APP ',
-                'Create INSERT SQL statements and TEST DATA',
-                'Create API with querystring to use directly in your APP  ',
-                'Use default grab and go APIs'
+                "Create customised JSON that suits your APP ",
+                "Create INSERT SQL statements and TEST DATA",
+                "Create API with querystring to use directly in your APP  ",
+                "Use default grab and go APIs",
             ],
             showDemoBig: true,
             demoLinkText: "Demo",
             showIconBig: true,
-            videoLink: this._dl.getLinks().JSON_ENGINE_DEMO
+            videoLink: this._dl.getLinks().JSON_ENGINE_DEMO,
         };
         //this.getCount();
         this.reactWay = `
@@ -8751,7 +8752,7 @@ JsonServerPageContainerComponent.ctorParameters = () => [
 ];
 JsonServerPageContainerComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-json-server-page-container',
+        selector: "app-json-server-page-container",
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./json-server-page-container.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/json-server-page/container/json-server-page-container/json-server-page-container.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./json-server-page-container.component.scss */ "./src/app/json-server-page/container/json-server-page-container/json-server-page-container.component.scss")).default]
     })
