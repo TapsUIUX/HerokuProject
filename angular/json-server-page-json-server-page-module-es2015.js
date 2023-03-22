@@ -8153,7 +8153,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-page-hero-area [headerData]='subHeaderContent'></app-page-hero-area> \n\n\n<div class=\"animated fadeIn faster \">\n\n\n<section class=\"container animated fadeIn \">\n  <!-- <app-how-to-use></app-how-to-use> -->\n</section>\n\n<div class=\"container  p-t-50 text-app font-light\">\n\n       <div class=\"row\">\n              <div  class=\"text-app-header fs-25 p-b-20 col-12 \"> Grab and Go APIs </div>\n\n       <div  class=\"col-xs-12 col-sm-12 col-md-6 fs-18 api-section font-light\" style='line-height:10px'>\n              \n              <br><br>\n\n\n              <div>  <code>GET :</code>   <a href=\"http://www.serverdummies.com/api/posts/\" target=\"blank\"> http://www.serverdummies.com/api/posts/ </a></div>\n\n              <br><br>\n\n              <div> <code> GET : </code>   <a href=\" http://www.serverdummies.com/api/posts/1 \" target=\"blank\"> http://www.serverdummies.com/api/posts/1  </a> </div>\n\n              <br><br>\n\n              <div> <code> GET :</code>  <a href=\" http://www.serverdummies.com/api/posts/id=1  \" target=\"blank\"> http://www.serverdummies.com/api/posts/id=1 </a> </div>\n\n              <br><br>\n\n              <div> <code> POST :</code>   http://www.serverdummies.com/api/posts </div>\n\n\n              \n       </div>\n\n       <div  class=\"col-xs-12 col-sm-12 col-md-6 fs-18 api-section \" style='line-height:10px' >\n\n\n             \n              <br><br>\n\n              <div> <code> PUT :</code>  http://www.serverdummies.com/api/posts/1 </div>\n\n              <br><br>\n\n              <div> <code> PATCH :</code>  http://www.serverdummies.com/api/posts/1 </div>\n\n              <br><br>\n\n              <div> <code> DELETE :</code>  http://www.serverdummies.com/api/posts/1 </div>\n              <br>\n \n\n       </div>\n\n       </div>\n\n\n</div>\n\n\n \n<app-generator-box (counter_e)=\"getCount($event)\"></app-generator-box>\n \n<app-param-info></app-param-info>\n\n</div>\n\n \n\n   \n\n\n \n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-page-hero-area [headerData]=\"subHeaderContent\"></app-page-hero-area>\n\n<div class=\"animated fadeIn faster\">\n  <section class=\"container animated fadeIn\">\n    <!-- <app-how-to-use></app-how-to-use> -->\n  </section>\n\n  <div class=\"container p-t-50 text-app font-light\">\n    <div class=\"row\">\n      <div class=\"text-app-header fs-25 p-b-20 col-12\">Grab and Go APIs</div>\n\n      <div\n        class=\"col-xs-12 col-sm-12 col-md-6 fs-18 api-section font-light\"\n        style=\"line-height: 10px\"\n      >\n        <br /><br />\n\n        <div>\n          <code>GET :</code>\n          <a href=\"https://www.serverdummies.com/api/posts/\" target=\"blank\">\n            http://www.serverdummies.com/api/posts/\n          </a>\n        </div>\n\n        <br /><br />\n\n        <div>\n          <code> GET : </code>\n          <a href=\" https://www.serverdummies.com/api/posts/1 \" target=\"blank\">\n            http://www.serverdummies.com/api/posts/1\n          </a>\n        </div>\n\n        <br /><br />\n\n        <div>\n          <code> GET :</code>\n          <a\n            href=\" https://www.serverdummies.com/api/posts/id=1  \"\n            target=\"blank\"\n          >\n            http://www.serverdummies.com/api/posts/id=1\n          </a>\n        </div>\n\n        <br /><br />\n\n        <div><code> POST :</code> https://www.serverdummies.com/api/posts</div>\n      </div>\n\n      <div\n        class=\"col-xs-12 col-sm-12 col-md-6 fs-18 api-section\"\n        style=\"line-height: 10px\"\n      >\n        <br /><br />\n\n        <div><code> PUT :</code> https://www.serverdummies.com/api/posts/1</div>\n\n        <br /><br />\n\n        <div>\n          <code> PATCH :</code> https://www.serverdummies.com/api/posts/1\n        </div>\n\n        <br /><br />\n\n        <div>\n          <code> DELETE :</code> https://www.serverdummies.com/api/posts/1\n        </div>\n        <br />\n      </div>\n    </div>\n  </div>\n\n  <!-- <app-generator-box (counter_e)=\"getCount($event)\"></app-generator-box> -->\n\n  <app-param-info></app-param-info>\n</div>\n");
 
 /***/ }),
 
@@ -8211,18 +8211,15 @@ let GeneratorBoxComponent = class GeneratorBoxComponent {
         this.url = "http://www.serverdummies.com";
         this.onGen = (arg) => {
             this.validateJson();
-            if (arg == 'json') {
+            if (arg == "json") {
                 this.onGenrateJson();
             }
-            ;
-            if (arg == 'api') {
+            if (arg == "api") {
                 this.onGenrateApi();
             }
-            ;
-            if (arg == 'sql') {
+            if (arg == "sql") {
                 this.onGenrateSql();
             }
-            ;
         };
         this.validateJson = () => {
             if (!this.inputParams) {
@@ -8246,16 +8243,20 @@ let GeneratorBoxComponent = class GeneratorBoxComponent {
             if (!this.invalidJson) {
                 let temp;
                 this._gen.generateJson(this.inputParams); //trigger the Call
-                this._gen.getGeneratedJson().subscribe(res => {
+                this._gen.getGeneratedJson().subscribe((res) => {
                     let temp = JSON.stringify(res);
                     //temp = JSON.stringify(res,null,'\t');
                     //temp = JSON.stringify(res,undefined,2);
                     temp = this.syntaxHighlight(temp);
-                    this.outPutData = temp.replace(/,/gi, ",<br>").replace(/{/gi, "<span class='br'>{</span class='br'><br>").replace(/}/gi, "<br><span class='br'>}</span>").replace(/\[/gi, "[<br>").replace(/\]/gi, "<br>]");
+                    this.outPutData = temp
+                        .replace(/,/gi, ",<br>")
+                        .replace(/{/gi, "<span class='br'>{</span class='br'><br>")
+                        .replace(/}/gi, "<br><span class='br'>}</span>")
+                        .replace(/\[/gi, "[<br>")
+                        .replace(/\]/gi, "<br>]");
                     this.checkBtn(this.outPutData);
                 }, // success path
-                // success path
-                error => console.log("ERROR : L30 Gen_box_component : ", error) // error path
+                (error) => console.log("ERROR : L30 Gen_box_component : ", error) // error path
                 );
             }
         };
@@ -8263,14 +8264,17 @@ let GeneratorBoxComponent = class GeneratorBoxComponent {
             if (!this.invalidJson) {
                 let temp;
                 this._gen.generateJson(this.inputParams); //trigger the Call
-                this._gen.getGeneratedJson().subscribe(res => {
+                this._gen.getGeneratedJson().subscribe((res) => {
                     temp = JSON.stringify(res);
                     temp = this.convertToSql(temp);
-                    this.outPutData = temp.replace(/INSERT INTO/gi, "<span><span class='key'>INSERT INTO</span>").replace(/VALUE/gi, "<span class='key'>VALUE</span>").replace(/YOUR_TABLE_NAME/gi, "<span class='red'>YOUR_TABLE_NAME</span><br>").replace(/;/gi, ";</span><br>");
+                    this.outPutData = temp
+                        .replace(/INSERT INTO/gi, "<span><span class='key'>INSERT INTO</span>")
+                        .replace(/VALUE/gi, "<span class='key'>VALUE</span>")
+                        .replace(/YOUR_TABLE_NAME/gi, "<span class='red'>YOUR_TABLE_NAME</span><br>")
+                        .replace(/;/gi, ";</span><br>");
                     this.checkBtn(this.outPutData);
                 }, // success path
-                // success path
-                error => console.log("ERROR : L30 Gen_box_component : ", error) // error path
+                (error) => console.log("ERROR : L30 Gen_box_component : ", error) // error path
                 );
             }
         };
@@ -8281,16 +8285,19 @@ let GeneratorBoxComponent = class GeneratorBoxComponent {
             let insert = "INSERT INTO ";
             let val = "VALUE";
             let temp = eval(arg); //conver that string to Array
-            let sql = '';
+            let sql = "";
             for (let item of temp) {
                 let items = "";
                 let values = "";
                 // let url = "http://localhost:3000/";
                 //let url = "http://localhost:3000/";
-                let temp = JSON.stringify(item).replace(/\{|\}/gi, "").replace(/http:\/\/www.serverdummies.com\//gi, "####").split(",");
+                let temp = JSON.stringify(item)
+                    .replace(/\{|\}/gi, "")
+                    .replace(/http:\/\/www.serverdummies.com\//gi, "####")
+                    .split(",");
                 // let temp =  JSON.stringify(item).replace(/\{|\}/gi,"").split(",") ;
                 //console.log(temp)
-                temp.forEach(el => {
+                temp.forEach((el) => {
                     let temp = el.split(":");
                     let key = "";
                     let val = "";
@@ -8310,7 +8317,13 @@ let GeneratorBoxComponent = class GeneratorBoxComponent {
                 values = values.replace(/\####/gi, "http://www.serverdummies.com/");
                 //values = values.replace(/\*/gi,"https://serverdummies.com/");
                 //values = values.replace(/www.serverdummies.com/gi,"http://serverdummies.com");
-                sql = sql + "INSERT INTO YOUR_TABLE_NAME ( " + items + " ) VALUE (" + values.trim().slice(1) + ");";
+                sql =
+                    sql +
+                        "INSERT INTO YOUR_TABLE_NAME ( " +
+                        items +
+                        " ) VALUE (" +
+                        values.trim().slice(1) +
+                        ");";
             }
             return sql;
         };
@@ -8329,14 +8342,12 @@ let GeneratorBoxComponent = class GeneratorBoxComponent {
             let bc = 0;
             let temp = arg;
             for (let i of arg) {
-                if (i == '[') {
+                if (i == "[") {
                     temp = temp.replace(/\[/gi, "[<br>");
                 }
-                ;
-                if (i == ']') {
+                if (i == "]") {
                     temp = temp.replace(/\]/gi, "<br>]");
                 }
-                ;
                 if (i == "{") {
                     if (bc == 0) {
                         bc = bc + 1;
@@ -8346,15 +8357,12 @@ let GeneratorBoxComponent = class GeneratorBoxComponent {
                         bc = bc + 1;
                         temp = temp.replace(/{/gi, "{<br>");
                     }
-                    ;
                 }
             }
             // this.syntaxHighlight(temp).replace(/" "/gi,"&nbsp;").replace(/,/gi,",<br>").replace(/{/gi,"&nbsp;&nbsp;{<br>").replace(/},/gi,"<br>&nbsp;&nbsp;},").replace(/\[/gi,"[<br>").replace(/\]/gi,"<br>]");
         };
         this.isJson = (item) => {
-            item = typeof item !== "string"
-                ? JSON.stringify(item)
-                : item;
+            item = typeof item !== "string" ? JSON.stringify(item) : item;
             try {
                 item = JSON.parse(item);
             }
@@ -8367,29 +8375,32 @@ let GeneratorBoxComponent = class GeneratorBoxComponent {
             return false;
         };
         this.syntaxHighlight = (json) => {
-            json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            json = json
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
             return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
-                var cls = 'number';
+                var cls = "number";
                 if (/^"/.test(match)) {
                     if (/:$/.test(match)) {
-                        cls = 'key';
+                        cls = "key";
                     }
                     else {
-                        cls = 'string';
+                        cls = "string";
                     }
                 }
                 else if (/true|false/.test(match)) {
-                    cls = 'boolean';
+                    cls = "boolean";
                 }
                 else if (/null/.test(match)) {
-                    cls = 'null';
+                    cls = "null";
                 }
-                return '<span class="' + cls + '">' + match + '</span>';
+                return '<span class="' + cls + '">' + match + "</span>";
             });
         };
     }
     ngOnInit() {
-        this.inputParams = '';
+        this.inputParams = "";
         this.spin = false;
         this.isDisabled = true;
         this.inputPlaceholder = `Enter Parameters`;
@@ -8400,12 +8411,12 @@ let GeneratorBoxComponent = class GeneratorBoxComponent {
         // elem.focus()
     }
     onClear() {
-        this.outPutData = '';
-        this.inputParams = '';
+        this.outPutData = "";
+        this.inputParams = "";
         this.checkBtn(this.outPutData);
     }
     onExample() {
-        this.inputParams = '';
+        this.inputParams = "";
         // setInterval(()=>{
         //   this.inputParams=this.example;
         // },500)
@@ -8414,7 +8425,7 @@ let GeneratorBoxComponent = class GeneratorBoxComponent {
         // },500)
     }
     onSelect() {
-        let temp = document.querySelector('#outPut');
+        let temp = document.querySelector("#outPut");
         var range = document.createRange();
         range.selectNodeContents(temp);
         var sel = window.getSelection();
@@ -8423,14 +8434,14 @@ let GeneratorBoxComponent = class GeneratorBoxComponent {
     }
     onCopy() {
         this.onSelect();
-        document.execCommand('copy');
+        document.execCommand("copy");
         // <HTMLInputElement>this.outPut.nativeElement.select();
     }
     onDownload() {
         this.onSelect();
-        let temp = document.querySelector('#outPut');
+        let temp = document.querySelector("#outPut");
         var textToWrite = temp.innerText;
-        var textFileAsBlob = new Blob([textToWrite], { type: 'text/plain' });
+        var textFileAsBlob = new Blob([textToWrite], { type: "text/plain" });
         let date = this._datePipe.transform(new Date()).replace(/' '/g, "_");
         var fileNameToSaveAs = "ServerDummies_" + date + ".txt";
         var downloadLink = document.createElement("a");
@@ -8447,7 +8458,7 @@ let GeneratorBoxComponent = class GeneratorBoxComponent {
         document.body.removeChild(event.target);
     }
     checkBtn(arg) {
-        if (arg != '') {
+        if (arg != "") {
             this.isDisabled = false;
             this.counter_e.emit(null);
             setTimeout(() => {
@@ -8477,14 +8488,14 @@ GeneratorBoxComponent.ctorParameters = () => [
     { type: _angular_common__WEBPACK_IMPORTED_MODULE_3__["DatePipe"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('outPut', { static: false })
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("outPut", { static: false })
 ], GeneratorBoxComponent.prototype, "outPut", void 0);
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
 ], GeneratorBoxComponent.prototype, "counter_e", void 0);
 GeneratorBoxComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-generator-box',
+        selector: "app-generator-box",
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./generator-box.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/json-server-page/components/generator-box/generator-box.component.html")).default,
         encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
         providers: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["DatePipe"]],

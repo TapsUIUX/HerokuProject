@@ -11672,7 +11672,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<app-page-hero-area [headerData]='subHeaderContent'></app-page-hero-area> \n\n\n<div class=\"animated fadeIn faster \">\n\n\n<section class=\"container animated fadeIn \">\n  <!-- <app-how-to-use></app-how-to-use> -->\n</section>\n\n<div class=\"container  p-t-50 text-app font-light\">\n\n       <div class=\"row\">\n              <div  class=\"text-app-header fs-25 p-b-20 col-12 \"> Grab and Go APIs </div>\n\n       <div  class=\"col-xs-12 col-sm-12 col-md-6 fs-18 api-section font-light\" style='line-height:10px'>\n              \n              <br><br>\n\n\n              <div>  <code>GET :</code>   <a href=\"http://www.serverdummies.com/api/posts/\" target=\"blank\"> http://www.serverdummies.com/api/posts/ </a></div>\n\n              <br><br>\n\n              <div> <code> GET : </code>   <a href=\" http://www.serverdummies.com/api/posts/1 \" target=\"blank\"> http://www.serverdummies.com/api/posts/1  </a> </div>\n\n              <br><br>\n\n              <div> <code> GET :</code>  <a href=\" http://www.serverdummies.com/api/posts/id=1  \" target=\"blank\"> http://www.serverdummies.com/api/posts/id=1 </a> </div>\n\n              <br><br>\n\n              <div> <code> POST :</code>   http://www.serverdummies.com/api/posts </div>\n\n\n              \n       </div>\n\n       <div  class=\"col-xs-12 col-sm-12 col-md-6 fs-18 api-section \" style='line-height:10px' >\n\n\n             \n              <br><br>\n\n              <div> <code> PUT :</code>  http://www.serverdummies.com/api/posts/1 </div>\n\n              <br><br>\n\n              <div> <code> PATCH :</code>  http://www.serverdummies.com/api/posts/1 </div>\n\n              <br><br>\n\n              <div> <code> DELETE :</code>  http://www.serverdummies.com/api/posts/1 </div>\n              <br>\n \n\n       </div>\n\n       </div>\n\n\n</div>\n\n\n \n<app-generator-box (counter_e)=\"getCount($event)\"></app-generator-box>\n \n<app-param-info></app-param-info>\n\n</div>\n\n \n\n   \n\n\n \n";
+    __webpack_exports__["default"] = "<app-page-hero-area [headerData]=\"subHeaderContent\"></app-page-hero-area>\n\n<div class=\"animated fadeIn faster\">\n  <section class=\"container animated fadeIn\">\n    <!-- <app-how-to-use></app-how-to-use> -->\n  </section>\n\n  <div class=\"container p-t-50 text-app font-light\">\n    <div class=\"row\">\n      <div class=\"text-app-header fs-25 p-b-20 col-12\">Grab and Go APIs</div>\n\n      <div\n        class=\"col-xs-12 col-sm-12 col-md-6 fs-18 api-section font-light\"\n        style=\"line-height: 10px\"\n      >\n        <br /><br />\n\n        <div>\n          <code>GET :</code>\n          <a href=\"https://www.serverdummies.com/api/posts/\" target=\"blank\">\n            http://www.serverdummies.com/api/posts/\n          </a>\n        </div>\n\n        <br /><br />\n\n        <div>\n          <code> GET : </code>\n          <a href=\" https://www.serverdummies.com/api/posts/1 \" target=\"blank\">\n            http://www.serverdummies.com/api/posts/1\n          </a>\n        </div>\n\n        <br /><br />\n\n        <div>\n          <code> GET :</code>\n          <a\n            href=\" https://www.serverdummies.com/api/posts/id=1  \"\n            target=\"blank\"\n          >\n            http://www.serverdummies.com/api/posts/id=1\n          </a>\n        </div>\n\n        <br /><br />\n\n        <div><code> POST :</code> https://www.serverdummies.com/api/posts</div>\n      </div>\n\n      <div\n        class=\"col-xs-12 col-sm-12 col-md-6 fs-18 api-section\"\n        style=\"line-height: 10px\"\n      >\n        <br /><br />\n\n        <div><code> PUT :</code> https://www.serverdummies.com/api/posts/1</div>\n\n        <br /><br />\n\n        <div>\n          <code> PATCH :</code> https://www.serverdummies.com/api/posts/1\n        </div>\n\n        <br /><br />\n\n        <div>\n          <code> DELETE :</code> https://www.serverdummies.com/api/posts/1\n        </div>\n        <br />\n      </div>\n    </div>\n  </div>\n\n  <!-- <app-generator-box (counter_e)=\"getCount($event)\"></app-generator-box> -->\n\n  <app-param-info></app-param-info>\n</div>\n";
     /***/
   },
 
@@ -11757,23 +11757,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.onGen = function (arg) {
           _this41.validateJson();
 
-          if (arg == 'json') {
+          if (arg == "json") {
             _this41.onGenrateJson();
           }
 
-          ;
-
-          if (arg == 'api') {
+          if (arg == "api") {
             _this41.onGenrateApi();
           }
 
-          ;
-
-          if (arg == 'sql') {
+          if (arg == "sql") {
             _this41.onGenrateSql();
           }
-
-          ;
         };
 
         this.validateJson = function () {
@@ -11811,7 +11805,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
               _this41.checkBtn(_this41.outPutData);
             }, // success path
-            // success path
             function (error) {
               return console.log("ERROR : L30 Gen_box_component : ", error);
             } // error path
@@ -11833,7 +11826,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
               _this41.checkBtn(_this41.outPutData);
             }, // success path
-            // success path
             function (error) {
               return console.log("ERROR : L30 Gen_box_component : ", error);
             } // error path
@@ -11849,7 +11841,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var val = "VALUE";
           var temp = eval(arg); //conver that string to Array
 
-          var sql = '';
+          var sql = "";
 
           var _iterator2 = _createForOfIteratorHelper(temp),
               _step2;
@@ -11922,17 +11914,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
               var i = _step3.value;
 
-              if (i == '[') {
+              if (i == "[") {
                 temp = temp.replace(/\[/gi, "[<br>");
               }
 
-              ;
-
-              if (i == ']') {
+              if (i == "]") {
                 temp = temp.replace(/\]/gi, "<br>]");
               }
-
-              ;
 
               if (i == "{") {
                 if (bc == 0) {
@@ -11942,8 +11930,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                   bc = bc + 1;
                   temp = temp.replace(/{/gi, "{<br>");
                 }
-
-                ;
               }
             } // this.syntaxHighlight(temp).replace(/" "/gi,"&nbsp;").replace(/,/gi,",<br>").replace(/{/gi,"&nbsp;&nbsp;{<br>").replace(/},/gi,"<br>&nbsp;&nbsp;},").replace(/\[/gi,"[<br>").replace(/\]/gi,"<br>]");
 
@@ -11971,23 +11957,23 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         };
 
         this.syntaxHighlight = function (json) {
-          json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+          json = json.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
           return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
-            var cls = 'number';
+            var cls = "number";
 
             if (/^"/.test(match)) {
               if (/:$/.test(match)) {
-                cls = 'key';
+                cls = "key";
               } else {
-                cls = 'string';
+                cls = "string";
               }
             } else if (/true|false/.test(match)) {
-              cls = 'boolean';
+              cls = "boolean";
             } else if (/null/.test(match)) {
-              cls = 'null';
+              cls = "null";
             }
 
-            return '<span class="' + cls + '">' + match + '</span>';
+            return '<span class="' + cls + '">' + match + "</span>";
           });
         };
       }
@@ -11995,7 +11981,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(GeneratorBoxComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          this.inputParams = '';
+          this.inputParams = "";
           this.spin = false;
           this.isDisabled = true;
           this.inputPlaceholder = "Enter Parameters";
@@ -12009,14 +11995,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onClear",
         value: function onClear() {
-          this.outPutData = '';
-          this.inputParams = '';
+          this.outPutData = "";
+          this.inputParams = "";
           this.checkBtn(this.outPutData);
         }
       }, {
         key: "onExample",
         value: function onExample() {
-          this.inputParams = ''; // setInterval(()=>{
+          this.inputParams = ""; // setInterval(()=>{
           //   this.inputParams=this.example;
           // },500)
 
@@ -12026,7 +12012,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onSelect",
         value: function onSelect() {
-          var temp = document.querySelector('#outPut');
+          var temp = document.querySelector("#outPut");
           var range = document.createRange();
           range.selectNodeContents(temp);
           var sel = window.getSelection();
@@ -12037,16 +12023,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "onCopy",
         value: function onCopy() {
           this.onSelect();
-          document.execCommand('copy'); // <HTMLInputElement>this.outPut.nativeElement.select();
+          document.execCommand("copy"); // <HTMLInputElement>this.outPut.nativeElement.select();
         }
       }, {
         key: "onDownload",
         value: function onDownload() {
           this.onSelect();
-          var temp = document.querySelector('#outPut');
+          var temp = document.querySelector("#outPut");
           var textToWrite = temp.innerText;
           var textFileAsBlob = new Blob([textToWrite], {
-            type: 'text/plain'
+            type: "text/plain"
           });
 
           var date = this._datePipe.transform(new Date()).replace(/' '/g, "_");
@@ -12072,7 +12058,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function checkBtn(arg) {
           var _this42 = this;
 
-          if (arg != '') {
+          if (arg != "") {
             this.isDisabled = false;
             this.counter_e.emit(null);
             setTimeout(function () {
@@ -12110,12 +12096,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }];
     };
 
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('outPut', {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("outPut", {
       "static": false
     })], GeneratorBoxComponent.prototype, "outPut", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()], GeneratorBoxComponent.prototype, "counter_e", void 0);
     GeneratorBoxComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: 'app-generator-box',
+      selector: "app-generator-box",
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./generator-box.component.html */
       "./node_modules/raw-loader/dist/cjs.js!./src/app/json-server-page/components/generator-box/generator-box.component.html"))["default"],

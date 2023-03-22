@@ -470,24 +470,30 @@ let GenerateJsonService = class GenerateJsonService {
         this._http = _http;
         this.generatedDataUpdated = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
         this.generatedCount = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
-        this.url = 'http://www.serverdummies.com';
+        this.url = "https://www.serverdummies.com";
     }
     generateAPI(params) {
         let options;
         if (params) {
-            options = { params: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]().set('structure', params.replace(/\n/g, '')) };
+            options = {
+                params: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]().set("structure", params.replace(/\n/g, "")),
+            };
         }
         return options.params;
     }
     generateJson(params) {
         let options;
         if (params) {
-            options = { params: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]().set('structure', params.replace(/\n/g, '')) };
+            options = {
+                params: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]().set("structure", params.replace(/\n/g, "")),
+            };
         }
         //console.log("params to be sent : ", params.replace(/\n/g, ''))
-        return this._http.get(this.url + "/api/generate", options).subscribe(res => {
+        return this._http.get(this.url + "/api/generate", options).subscribe((res) => {
             this.generatedData = res;
             this.generatedDataUpdated.next(this.generatedData);
+        }, (error) => {
+            throw error;
         });
     }
     getGeneratedJson() {
@@ -495,7 +501,9 @@ let GenerateJsonService = class GenerateJsonService {
     }
     generateCount() {
         //console.log("params to be sent : ", params.replace(/\n/g, ''))
-        return this._http.get(this.url + "/read").subscribe(res => { this.generatedCount.next(res); });
+        return this._http.get(this.url + "/read").subscribe((res) => {
+            this.generatedCount.next(res);
+        });
     }
     getCount() {
         return this.generatedCount.asObservable();
@@ -506,7 +514,7 @@ GenerateJsonService.ctorParameters = () => [
 ];
 GenerateJsonService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: 'root'
+        providedIn: "root",
     })
 ], GenerateJsonService);
 

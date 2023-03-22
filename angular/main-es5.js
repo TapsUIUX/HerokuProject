@@ -997,7 +997,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this._http = _http;
         this.generatedDataUpdated = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
         this.generatedCount = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
-        this.url = 'http://www.serverdummies.com';
+        this.url = "https://www.serverdummies.com";
       }
 
       _createClass(GenerateJsonService, [{
@@ -1007,7 +1007,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (params) {
             options = {
-              params: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]().set('structure', params.replace(/\n/g, ''))
+              params: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]().set("structure", params.replace(/\n/g, ""))
             };
           }
 
@@ -1022,7 +1022,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (params) {
             options = {
-              params: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]().set('structure', params.replace(/\n/g, ''))
+              params: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]().set("structure", params.replace(/\n/g, ""))
             };
           } //console.log("params to be sent : ", params.replace(/\n/g, ''))
 
@@ -1031,6 +1031,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _this.generatedData = res;
 
             _this.generatedDataUpdated.next(_this.generatedData);
+          }, function (error) {
+            throw error;
           });
         }
       }, {
@@ -1065,7 +1067,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     };
 
     GenerateJsonService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-      providedIn: 'root'
+      providedIn: "root"
     })], GenerateJsonService);
     /***/
   },
